@@ -18,7 +18,7 @@ void	ft_putchar(char c);
 int	main(int argc, char *argv[])
 {
 	int	i;
-	
+
 	i = 1;
 	while (i < argc)
 	{
@@ -30,7 +30,7 @@ int	main(int argc, char *argv[])
 
 void	ft_putstr(char *str)
 {
-	int index;
+	int	index;
 
 	index = 0;
 	while (str[index] != 0)

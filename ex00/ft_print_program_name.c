@@ -29,8 +29,7 @@ void	ft_print_program_name(char *argv[])
 	while (argv[0][len] != 0)
 	{
 		write(1, &argv[0][len], 1);
- 		len++;
+		len++;
 	}
 	write(1, &"\n", 1);
 }
-
