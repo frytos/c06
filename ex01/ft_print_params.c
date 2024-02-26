@@ -6,14 +6,13 @@
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 16:21:28 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/21 17:10:59 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/22 22:33:57 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 void	ft_putstr(char *str);
-void	ft_putchar(char c);
 
 int	main(int argc, char *argv[])
 {
@@ -23,7 +22,7 @@ int	main(int argc, char *argv[])
 	while (i < argc)
 	{
 		ft_putstr(argv[i]);
-		ft_putchar(10);
+		ft_putstr("\n");
 		i++;
 	}
 }
@@ -35,12 +34,7 @@ void	ft_putstr(char *str)
 	index = 0;
 	while (str[index] != 0)
 	{
-		ft_putchar(str[index]);
+		write(1, &str[index], 1);
 		index++;
 	}
-}
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
 }

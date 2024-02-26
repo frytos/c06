@@ -12,9 +12,6 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-
 int	main(int argc, char *argv[])
 {
 	int	index;
@@ -24,19 +21,8 @@ int	main(int argc, char *argv[])
 	{
 		while (*argv[index])
 			write(1, argv[index]++, 1);
-		ft_putchar(10);
+		write(1, "\n", 1);
 		index--;
 	}
 	return (0);
-}
-
-void	ft_putstr(char *str)
-{
-	while (*str)
-		ft_putchar(*str++);
-}
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
 }
