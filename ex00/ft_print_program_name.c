@@ -31,5 +31,5 @@ void	ft_print_program_name(char *argv[])
 		write(1, &argv[0][len], 1);
 		len++;
 	}
-	write(1, &"\n", 1);
+	write(1, "\n", 1);
 }
